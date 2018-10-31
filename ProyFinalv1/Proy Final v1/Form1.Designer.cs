@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.Cuadro = new System.Windows.Forms.PictureBox();
-            this.bnQuitar = new System.Windows.Forms.Button();
-            this.bnPoner = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Cuadro)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,27 +41,8 @@
             this.Cuadro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Cuadro.TabIndex = 0;
             this.Cuadro.TabStop = false;
+            this.Cuadro.Paint += new System.Windows.Forms.PaintEventHandler(this.Cuadro_Paint);
             this.Cuadro.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
-            // 
-            // bnQuitar
-            // 
-            this.bnQuitar.Location = new System.Drawing.Point(12, -1);
-            this.bnQuitar.Name = "bnQuitar";
-            this.bnQuitar.Size = new System.Drawing.Size(67, 45);
-            this.bnQuitar.TabIndex = 1;
-            this.bnQuitar.Text = "Quitar Dibujo";
-            this.bnQuitar.UseVisualStyleBackColor = true;
-            this.bnQuitar.Click += new System.EventHandler(this.bnQuitar_Click);
-            // 
-            // bnPoner
-            // 
-            this.bnPoner.Location = new System.Drawing.Point(85, 1);
-            this.bnPoner.Name = "bnPoner";
-            this.bnPoner.Size = new System.Drawing.Size(67, 43);
-            this.bnPoner.TabIndex = 2;
-            this.bnPoner.Text = "Poner Dibujo";
-            this.bnPoner.UseVisualStyleBackColor = true;
-            this.bnPoner.Click += new System.EventHandler(this.bnPoner_Click);
             // 
             // Form1
             // 
@@ -71,12 +50,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1292, 731);
-            this.Controls.Add(this.bnPoner);
-            this.Controls.Add(this.bnQuitar);
             this.Controls.Add(this.Cuadro);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.Cuadro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -86,8 +62,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox Cuadro;
-        private System.Windows.Forms.Button bnQuitar;
-        private System.Windows.Forms.Button bnPoner;
     }
 }
 
